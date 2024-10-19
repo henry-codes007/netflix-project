@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body class="signup">
+
+    <header>
+        <div class="container">
+            <div class="logo">                
+                <a href="index.html"><img src="./assets/filmpire.png" alt="Logo"></a>
+            </div>
+            <a href="signin.html"><button class="btn btn-rounded">Sign In</button></a>
+        </div>
+    </header>
+
+    <div class="signup-modal">
+        <h3>Sign Up</h3>
+        <form id="signup-form">
+            <div class="password_input">
+                <input type="email" id="email" maxlength="50" minlength="5" required>
+                <span class="label">Email address</span>
+            </div>
+
+            <div class="password_input">
+                <input type="password" id="password" maxlength="23" minlength="5" required>
+                <span class="label">Password</span>
+                <span id="password-toggle" class="toggle-icon">👁️</span>                
+            </div>
+            <div id="password-strength" class="password__strength-indicator">
+                <div class="strength-bar" id="strength-bar"></div>
+            </div>
+            <div id="strength-text" class="indicator-text"></div>
+
+            <div class="password_input">
+                <input type="password" id="passwordCheck" maxlength="23" minlength="5" required>
+                <span class="label">Confirm Password</span>
+                <button id="confirm-toggle" class="toggle-icon">👁️</button>                
+            </div>
+
+            <button type="submit" class="button">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="signin.html"><b>Sign In Now</b></a></p>
+    </div>
+
+    <script src="Js/signup.js"></script>
+</body>
+</html>

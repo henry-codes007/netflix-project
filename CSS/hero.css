@@ -1,0 +1,123 @@
+.hero{
+    min-height: 100vh;
+    width: 100vw;    
+    background-image: url('../assets/movie1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    display: grid;
+    place-items: center;
+}
+#start{
+    position: relative;
+}
+/* #start::before{
+    content: "Let's";
+}
+#start::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    position: absolute;
+    right: 0;
+} */
+.hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    /* top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 100px 100px 250px #000000, inset -100px -100px 250px #000000;
+  } 
+
+.logo{
+    width: 150px;
+    height: auto;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.hero header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 200;
+    /* background-color: black; */
+}
+.hero header.scrolled {
+    background-color: black;
+    transition: background-color 0.3s ease; /* Adds a smooth transition */
+}
+
+.hero  header .container{
+    display: flex;
+    justify-content: space-between;    
+    height: 5.6rem;
+    align-items: center;    
+}
+
+.hero .content{
+    text-align: center;
+    max-width: 650px;
+    color: white;   
+    z-index: 20; 
+}
+
+.content .container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.content .container button{
+    width: fit-content;
+}
+.bg-select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+}
+.bg-select div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bg-select  span.outer{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--netflix-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-select span.inner{
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: var(--netflix-primary-color);
+}
+
+
+@media (max-width: 700px) {
+    .hero::after {
+      box-shadow: inset 80px 80px 250px #000000, inset -80px -80px 250px #000000;
+    }
+}
